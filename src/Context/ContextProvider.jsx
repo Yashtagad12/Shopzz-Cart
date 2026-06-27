@@ -1,0 +1,36 @@
+import { createContext, useContext, useState } from "react";
+
+const StateContext = createContext();
+
+const initialState = {
+    chat: false,
+    cart: false,
+    userProfile: false,
+    notification: false,        // Fixed spelling
+}
+
+export const ContextProvider = ({ children }) => {
+
+    const [activeMenu, setactiveMenu] = useState(true);
+    const [isClicked, setisClicked] = useState(initialState);
+    const [screensize, setScreensize] = useState(undefined);
+    const handleClick = (clicked) => {
+        setisClicked({ ...initialState, [clicked]: true });
+    };
+
+    return (
+        <StateContext.Provider value={{
+            activeMenu,
+            setactiveMenu,
+            isClicked,
+            setisClicked,
+            handleClick,
+            screensize,
+            setScreensize
+        }}>
+            {children}
+        </StateContext.Provider >
+    )
+}
+
+export const useStateContext = () => useContext(StateContext);

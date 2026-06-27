@@ -8,9 +8,12 @@ import {
   Ecommerce, Orders, Calender, Employee, Stacked, Pyramid, Customers, Kanban,
   Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line
 } from './Pages';
+import { useStateContext } from './Context/ContextProvider';
 
 function App() {
-  const [activeMenu] = useState(true);           // You can make this dynamic later
+
+  const { activeMenu } = useStateContext();
+
   const [isThemeSettingsOpen, setIsThemeSettingsOpen] = useState(false);
 
   return (
@@ -41,7 +44,8 @@ function App() {
         )}
 
         {/* Main Content Area */}
-        <div className={`dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
+        <div className={`dark:bg-main-bg bg-main-bg min-h-screen w-full 
+          ${activeMenu ? 'md:ml-72' : 'md:ml-0'}`}>
           <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
             <Navbar />
           </div>
@@ -76,10 +80,9 @@ function App() {
           </div>
         </div>
 
-        {/* Theme Settings Modal / Panel */}
         {isThemeSettingsOpen && (
           <ThemeSettings
-            onClose={() => setIsThemeSettingsOpen(false)}
+            onClose={() => setIsThemeSettingsOpen(false)}   // Proper close handler
           />
         )}
 
