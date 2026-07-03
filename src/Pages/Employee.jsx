@@ -37,7 +37,7 @@ const Employee = () => {
       {/* Table */}
       <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
 
-        <table className="min-w-[1100px] w-full">
+        <table className="min-w-275 w-full">
 
           <thead className="bg-gray-100 dark:bg-main-dark-bg sticky top-0">
 
