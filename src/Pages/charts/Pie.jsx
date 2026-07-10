@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Header } from "../../Components";
+import PieChartComponent from "../../Components/Charts/PieChart";
 
 const Pie = () => {
   return (
-    <div>Pie</div>
-  )
-}
+    <div className="m-2 md:m-10 p-5 md:p-8 bg-white dark:bg-secondary-dark-bg rounded-2xl shadow">
 
-export default Pie
+
+
+      <div className="mt-8">
+
+        <PieChartComponent />
+
+      </div>
+
+    </div>
+  );
+};
+
+export default Pie;
