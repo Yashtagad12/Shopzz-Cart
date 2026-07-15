@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { SiShopware } from "react-icons/si";
+import { FaShoppingCart } from 'react-icons/fa';
 import { MdOutlineCancel } from "react-icons/md";
 
 import { links } from "../data/dummy";
@@ -44,7 +44,7 @@ const Sidebar = () => {
               onClick={handleCloseSidebar}
               className="flex items-center gap-3 ml-3 mt-4 text-2xl font-bold dark:text-white"
             >
-              <SiShopware
+              <FaShoppingCart
                 style={{ color: currentColor }}
               />
 
