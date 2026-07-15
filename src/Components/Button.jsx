@@ -15,7 +15,7 @@ const Button = ({
     <button
       type="button"
       style={{
-        backgroundColor: bgColor || currentColor,
+        backgroundColor: currentColor,
         color: color || "#fff",
         borderRadius,
       }}
