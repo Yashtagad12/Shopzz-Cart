@@ -5,7 +5,7 @@ import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import avatar from '../data/avatar.jpg';
-
+import logo from '../assets/Screenshots/shopzz-cart-logo.png'
 import Chat from './Chat';
 import Cart from './Cart';
 import Notification from './Notification';   // Fixed spelling
@@ -49,13 +49,15 @@ const Navbar = () => {
     <div className="flex flex-col md:flex-row md:justify-between md:items-center p-2 md:mx-6 relative">
 
       {/* Menu Button - Always on Left */}
-      <div className="flex justify-start mb-3 md:mb-0 md:block">
+      <div className="flex justify-between mb-3 md:mb-0 md:block">
         <NavButton
           title="Menu"
           customFunc={() => setActiveMenu((prevActionMenu) => !prevActionMenu)}
           color={currentColor}
           icon={<AiOutlineMenu />}
         />
+
+        <img className='md:hidden w-50' src={logo} alt="logo" />
       </div>
 
       {/* Right Side Icons */}
