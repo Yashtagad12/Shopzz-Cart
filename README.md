@@ -304,7 +304,7 @@ Make sure you have the following installed:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Yashtagad12/Shoppz-Cart.git
+git clone https://github.com/Yashtagad12/Shopzz-Cart.git
 
 # 2. Navigate into the project directory
 cd mega-dashboard
